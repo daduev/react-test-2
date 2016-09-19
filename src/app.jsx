@@ -9,19 +9,19 @@ const App = React.createClass({
         )
     }
 });
-
-export default App;
 */
 
 class App extends React.Component {
     render(){
         let txt = this.props.txt;
+        let chl = this.props.children;
 
-        console.log(txt);
+        console.log(chl);
 
         return (
             <div>
                 <h1>{txt}</h1>
+                {chl}
             </div>
         )
     }
@@ -36,7 +36,6 @@ App.defaultProps = {
     num: 5
 }
 
-ReactDom.render(<App txt={"111"} num={4} />, document.getElementById("content"));
+//ReactDom.render(<App txt={"111"} num={4} />, document.getElementById("content"));
 
-//React lessons
-//https://egghead.io/courses/react-fundamentals
+export default App;
